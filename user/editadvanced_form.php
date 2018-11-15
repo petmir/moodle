@@ -289,6 +289,16 @@ class user_editadvanced_form extends moodleform {
                     $err['username'] = get_string('invalidusername');
                 }
             }
+            // Check maximum length.
+            // NOTE: The maximum length is 100 characters because that is the 
+            // longest username someone could have created when the column 
+            // mdl_user.username in the database was set to maximum length 
+            // of 100 characters. That limit was since increased to accomodate 
+            // the extra info that gets stored there when the user is deleted 
+            // (see issue MDL-53106).
+            if (strlen($usernew->username) > 100) {
+                $err['username'] = get_string('invalidusernamelength');
+            }
         }
 
         if (!$user or (isset($usernew->email) && $user->email !== $usernew->email)) {

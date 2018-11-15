@@ -358,6 +358,7 @@ $string['invaliduserid'] = 'Invalid user id';
 $string['invaliduserfield'] = 'Invalid user field: {$a}';
 $string['invaliduserdata'] = 'Invalid user data: {$a}';
 $string['invalidusername'] = 'The given username contains invalid characters';
+$string['invalidusernamelength'] = 'The given username is too long';
 $string['invalidxmlfile'] = '"{$a}" is not a valid XML file';
 $string['iplookupfailed'] = 'Cannot find geo information about this IP address {$a}';
 $string['iplookupprivate'] = 'Cannot display lookup of private IP address';

@@ -2630,6 +2630,17 @@ function xmldb_main_upgrade($oldversion) {
         // Main savepoint reached.
         upgrade_main_savepoint(true, 2016120505.04);
     }
+    
+    if ($oldversion < 2018111900.00) {
+
+        // Change the maximum length of the string in the username column to 255 characters.
+        // This is to reserve enough space for the extra stuff that gets stored there when 
+        // a user is deleted.
+        $DB->execute('ALTER TABLE {user} MODIFY username VARCHAR(255)');
+
+        // Main savepoint reached.
+        upgrade_main_savepoint(true, 2018111900.00);
+    }
 
     return true;
 }
