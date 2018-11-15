@@ -1033,6 +1033,7 @@ $string['interestslist_help'] = 'Enter your interests, one by one, which will th
 $string['invalidemail'] = 'Invalid email address';
 $string['invalidlogin'] = 'Invalid login, please try again';
 $string['invalidusername'] = 'The username can only contain alphanumeric lowercase characters (letters and numbers), underscore (_), hyphen (-), period (.) or at symbol (@).';
+$string['invalidusernamelength'] = 'The username cannot be longer than 100 characters.';
 $string['invalidusernameupload'] = 'Invalid username';
 $string['ip_address'] = 'IP address';
 $string['jump'] = 'Jump';
