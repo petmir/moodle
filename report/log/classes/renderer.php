@@ -176,6 +176,11 @@ class report_log_renderer extends plugin_renderer_base {
         echo html_writer::label(get_string('edulevel'), 'menuedulevel', false, array('class' => 'accesshide'));
         echo html_writer::select($edulevel, 'edulevel', $reportlog->edulevel, false).$this->help_icon('edulevel');
 
+        // Add results per page.
+        $perpage = $reportlog->perpage;
+        echo html_writer::label(get_string('perpage').':&nbsp;', 'inputperpage', false);
+        echo html_writer::empty_tag('input', array('name' => 'perpage', 'id' => 'inputperpage', 'type' => 'text', 'value' => $perpage, 'size' => 3));
+
         // Add reader option.
         // If there is some reader available then only show submit button.
         $readers = $reportlog->get_readers(true);
